@@ -1,0 +1,104 @@
+@import './variables';
+@import './functions';
+@import './maps';
+@import './mixins';
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import './fontawesome/scss/fontawesome.scss';
+@import './fontawesome/scss/solid.scss';
+@import './fontawesome/scss/brands.scss';
+
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.bg-transparent {
+    --bs-bg-opacity: 0;
+}
+
+.caps {
+    text-transform: uppercase;
+}
+
+.navbar-brand {
+    img {
+        max-width: 10vw;
+    }
+}
+
+#contact {
+    .brand {
+        max-width: 15vw;
+    }
+}
+
+.phone-grid {
+    display: grid;
+    grid-template-columns: 5vw 3fr;
+}
+
+footer {
+
+    #copyright {
+        text-align: left;
+    }
+
+    #social-icons {
+        text-align: right;
+    }
+
+    #policies ul li,
+    #social-icons ul li {
+        display: inline;
+    }
+}
+
+@include respond-below(md) {
+    .navbar-brand {
+        img {
+            max-width: 30vw;
+        }
+    }
+
+    #contact {
+        .brand {
+            max-width: 30vw;
+        }
+    }
+
+    footer {
+
+        #copyright,
+        #social-icons {
+            text-align: center;
+        }
+
+        #social-icons {
+            padding: 0;
+        }
+
+        #policies ul li {
+            display: block;
+        }
+    }
+}
+
+@include respond-below(sm) {
+    .navbar-brand {
+        img {
+            max-width: 60vw;
+        }
+    }
+
+    #contact {
+        .brand {
+            max-width: 50vw;
+        }
+    }
+
+}
